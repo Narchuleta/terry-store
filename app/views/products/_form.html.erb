@@ -8,7 +8,10 @@
     <%= f.input :description, as: :trix_editor %>
     <%= f.association :brand %>
     <%= f.association :category %>
-    <%= if @product.avatar.url(:medium) %>
+    <% if @product.avatar.url %>
+      <%= image_tag @product.avatar.url(:medium) %>
+    
+    <% end %>
     <%= f.input :avatar, as: :file %>
   </div>
 
