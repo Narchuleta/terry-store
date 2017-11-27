@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  get 'shop' => 'store_front#index'
+
+  get 'about' => 'store_front#about'
+
   devise_for :users
   scope :admin do
   resources :products
@@ -7,6 +11,6 @@ Rails.application.routes.draw do
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   end
   
-  root 'products#index'
+  root 'store_front#index'
   
 end
