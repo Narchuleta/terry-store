@@ -1,18 +1,9 @@
  <div class="container">
-  <div class="row">
     
 <h1>Welcome to Storetastic</h1>
 <p>Where yuu can find anything you can imagine.</p>
 
-    <% if params[:category_id] %>
-    <h3> All <%= @category.name %></h3>
-    <% else %>
-    <h3> All Products</h3>
-    <% end %>
-    <% if @products.empty? %>
-    <h2>There are no products in <%= @category.name %></h2>
-    <% end %>
-    
+  <div class="row">
     <% @products.each do |product| %>
       <div class="col-sm-4">
         <div class="panel panel-default">
