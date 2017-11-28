@@ -1,9 +1,9 @@
 class CreateLineItems < ActiveRecord::Migration[5.1]
   def change
     create_table :line_items do |t|
-      t.string :product
+      t.references :product, foreign_key: true
       t.references :cart, foreign_key: true
-      t.integer :quanity
+      t.integer :quantity, default: 1
       t.decimal :price
 
       t.timestamps
