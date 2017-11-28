@@ -1,5 +1,12 @@
 class Cart < ApplicationRecord
   has_many :line_items, dependent: :destroy
+  
+  def subtotal
+    line_items.to_a.sum do |item|
+      item.total
+  end
+  
+  end
 end
 
 # == Schema Information
