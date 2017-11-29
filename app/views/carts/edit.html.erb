@@ -24,3 +24,4 @@
 <%= link_to 'Continue Shopping', shop_path, class: 'btn btn-success btn-sm' %>
 <% unless @cart.line_items.empty? %>
 <%= link_to 'Empty Cart', @cart, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger btn-sm' %>
+<% end %>
