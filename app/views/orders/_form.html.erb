@@ -1,9 +1,9 @@
 <%= simple_form_for(@order) do |f| %>
 <%= f.error_notification %>
 <div class="form_inputs">
-  <%= f.input.name %>
-  <%= f.input.address %>
-  <%= f.input.pay_type, collection: Order: :PAYMENT_TYPES, prompt: 'Select a payment method' %>
+  <%= f.input :name %>
+  <%= f.input :address %>
+  <%= f.input :pay_type, collection: Order::PAYMENT_TYPES, prompt: 'Select a payment method' %>
 </div>
 
 <div class="form_actions">

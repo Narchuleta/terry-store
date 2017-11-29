@@ -1,7 +1,5 @@
 Rails.application.routes.draw do
 
-  
-
   get 'shop' => 'store_front#index'
 
   get 'about' => 'store_front#about'
